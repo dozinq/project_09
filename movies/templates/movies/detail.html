@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2 class="text-center">DETAIL</h2>
+  <h3>{{ movie.pk }} 번째 글</h3>
+  <hr>
+  <p>title: {{ movie.title }}</p>
+  <p>release_date: {{ movie.release_date }}</p>
+  <p>popularity: {{ movie.popularity }}</p>
+  <p>vote_count: {{ movie.vote_count }}</p>
+  <p>vote_average: {{ movie.vote_average }}</p>
+  <p>overview: {{ movie.overview }}</p>
+  <p>
+    <img src="{{ movie.poster_path }}" alt="">
+  </p>
+  <hr>
+  <a href="{% url 'movies:index' %}">[back]</a>
+{% endblock  %}
